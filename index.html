@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jalu Publishing — Simple websites for local businesses</title>
+<meta name="description" content="Clean, fast websites for small local service businesses in the US, UK, and Australia. New sites from $490. Redesigns from $590. Yearly hosting & upkeep, no monthly fee.">
+<meta name="theme-color" content="#0f3d4c">
+<link rel="canonical" href="https://jalupublishing.com/">
+<meta property="og:title" content="Jalu Publishing — Simple websites for local businesses">
+<meta property="og:description" content="Clean, fast websites for small local service businesses. New sites from $490. Redesigns from $590.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jalupublishing.com/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3d4c'/%3E%3Cpath d='M16 42V22h8.2c6.4 0 10.4 3.2 10.4 9.2S30.6 40.4 24.2 40.4H22.4V42H16zm6.4-7.2h1.6c3.2 0 5-1.5 5-4.6s-1.8-4.6-5-4.6h-1.6v9.2zM40 42l-6.4-20h6.8l3.4 12.2L47.2 22H54L47.6 42H40z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#12263a;--muted:#5a6b7b;--bg:#f7fafc;--card:#fff;--line:#e2eaf0;
+  --brand:#0f3d4c;--brand2:#1a6b7c;--accent:#e8f4f6;--ok:#0d6b4f;
+  --radius:16px;--max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--brand2)}
+img{max-width:100%;height:auto;display:block}
+.wrap{width:min(100% - 2.5rem, var(--max));margin-inline:auto}
+.skip{position:absolute;left:-9999px;top:auto}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;padding:.5rem 1rem;border-radius:8px}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
+.logo{font-weight:800;font-size:1.15rem;color:var(--brand);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--brand2);font-weight:600}
+.nav-links{display:flex;gap:1.25rem;align-items:center;font-size:.95rem}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:#fff!important;text-decoration:none;font-weight:700;padding:.75rem 1.2rem;border-radius:999px;border:0;font-size:1rem;cursor:pointer}
+.btn:hover{background:var(--brand2)}
+.btn-ghost{background:transparent;color:var(--brand)!important;border:2px solid var(--brand)}
+.btn-ghost:hover{background:var(--accent)}
+.btn-lg{padding:.95rem 1.45rem;font-size:1.05rem}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;font:inherit;color:var(--ink)}
+
+/* Hero */
+.hero{padding:4.5rem 0 3.5rem;background:linear-gradient(165deg,#fff 0%,var(--accent) 55%,#fff 100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand2);background:var(--accent);padding:.35rem .7rem;border-radius:999px;margin-bottom:1rem}
+.hero h1{font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.12;letter-spacing:-.03em;margin:0 0 1rem;color:var(--brand)}
+.hero .lead{font-size:1.15rem;color:var(--muted);max-width:36rem;margin:0 0 1.6rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.25rem}
+.hero-note{font-size:.92rem;color:var(--muted);margin:0}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.5rem;box-shadow:0 12px 40px rgba(15,61,76,.08)}
+.hero-card h2{margin:0 0 .85rem;font-size:1.05rem;color:var(--brand)}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.65rem 0;border-bottom:1px solid var(--line);gap:1rem}
+.price-row:last-child{border-bottom:0}
+.price-row strong{font-size:1.15rem;color:var(--brand);white-space:nowrap}
+.price-row span{color:var(--muted);font-size:.95rem}
+
+/* Sections */
+section{padding:4rem 0}
+section h2{font-size:clamp(1.55rem,3vw,2rem);letter-spacing:-.02em;margin:0 0 .5rem;color:var(--brand)}
+.section-lead{color:var(--muted);max-width:38rem;margin:0 0 2rem}
+.bg{background:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.15rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.35rem 1.4rem}
+.card h3{margin:.35rem 0 .45rem;font-size:1.1rem;color:var(--brand)}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+.icon{width:42px;height:42px;border-radius:12px;background:var(--accent);color:var(--brand2);display:grid;place-items:center;font-size:1.2rem}
+
+/* Pricing */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.plan{background:#fff;border:1px solid var(--line);border-radius:20px;padding:1.6rem;display:flex;flex-direction:column;gap:.85rem}
+.plan.featured{border-color:var(--brand2);box-shadow:0 10px 30px rgba(26,107,124,.12)}
+.plan .tag{align-self:flex-start;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--accent);color:var(--brand2);padding:.3rem .6rem;border-radius:999px}
+.plan h3{margin:0;font-size:1.35rem;color:var(--brand)}
+.plan .amount{font-size:2.4rem;font-weight:800;letter-spacing:-.03em;color:var(--brand);line-height:1}
+.plan .amount small{font-size:1rem;font-weight:600;color:var(--muted)}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:.55rem;flex:1}
+.plan li{padding-left:1.4rem;position:relative;color:var(--muted)}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+.fine{font-size:.9rem;color:var(--muted);margin:1.25rem 0 0}
+
+/* Portfolio */
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
+.work{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
+.work:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(18,38,58,.08)}
+.work-thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--brand),var(--brand2));position:relative;overflow:hidden}
+.work-thumb::after{content:"";position:absolute;inset:18% 12% auto;height:62%;background:rgba(255,255,255,.92);border-radius:10px 10px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.work-thumb .bars{position:absolute;left:18%;right:18%;top:28%;display:grid;gap:8px;z-index:1}
+.work-thumb .bars i{display:block;height:8px;border-radius:4px;background:rgba(15,61,76,.15)}
+.work-thumb .bars i:nth-child(1){width:55%}
+.work-thumb .bars i:nth-child(2){width:78%}
+.work-thumb .bars i:nth-child(3){width:42%}
+.t2{background:linear-gradient(135deg,#1a4a5c,#2a8a9a)}
+.t3{background:linear-gradient(135deg,#0d3550,#3d7a8c)}
+.t4{background:linear-gradient(135deg,#123848,#1f6f82)}
+.t5{background:linear-gradient(135deg,#0b2f3c,#268094)}
+.work-body{padding:1.05rem 1.15rem 1.2rem}
+.work-body h3{margin:0 0 .35rem;font-size:1.05rem;color:var(--brand)}
+.work-body p{margin:0;font-size:.9rem;color:var(--muted)}
+.badge{display:inline-block;margin-top:.65rem;font-size:.75rem;font-weight:700;color:var(--brand2);background:var(--accent);padding:.25rem .55rem;border-radius:999px}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;counter-reset:step}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;position:relative}
+.step::before{counter-increment:step;content:counter(step);width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:.85rem;font-weight:700;display:grid;place-items:center;margin-bottom:.7rem}
+.step h3{margin:0 0 .4rem;font-size:1.05rem;color:var(--brand)}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* FAQ */
+.faq{display:grid;gap:.75rem;max-width:720px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem}
+summary{cursor:pointer;font-weight:700;color:var(--brand);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--brand2);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:.7rem 0 0;color:var(--muted)}
+
+/* Contact */
+.contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:1.5rem;align-items:center;background:var(--brand);color:#fff;border-radius:22px;padding:2rem}
+.contact-box h2{color:#fff;margin:0 0 .5rem}
+.contact-box p{margin:0 0 1rem;opacity:.9}
+.contact-box .btn{background:#fff;color:var(--brand)!important}
+.contact-meta{background:rgba(255,255,255,.08);border-radius:16px;padding:1.25rem}
+.contact-meta dt{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;opacity:.7;margin-top:.7rem}
+.contact-meta dt:first-child{margin-top:0}
+.contact-meta dd{margin:.2rem 0 0}
+.contact-meta a{color:#fff}
+
+footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--muted);font-size:.92rem}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{color:var(--brand)}
+
+@media (max-width:860px){
+  .hero-grid,.plans,.steps,.contact-box{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:1rem 1.25rem 1.25rem;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.06)}
+  .menu-toggle{display:inline-block}
+  .hero{padding:3rem 0 2.5rem}
+  section{padding:3rem 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">Jalu <span>Publishing</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" id="menuBtn">Menu</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#work">Samples</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="mailto:hallo@jalupublishing.com">Email us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">For local service businesses</span>
+        <h1>Simple websites that help customers find you and ask for a quote</h1>
+        <p class="lead">We build clean, fast sites for cleaners, plumbers, salons, garages, and other local trades in the US, UK, and Australia — easy to update, mobile-friendly, and priced clearly.</p>
+        <div class="hero-cta">
+          <a class="btn btn-lg" href="mailto:hallo@jalupublishing.com?subject=Website%20inquiry">Get in touch</a>
+          <a class="btn btn-ghost btn-lg" href="#pricing">See pricing</a>
+        </div>
+        <p class="hero-note">One-time build + yearly hosting &amp; upkeep. No monthly fee.</p>
+      </div>
+      <aside class="hero-card" aria-label="Starting prices">
+        <h2>Starting prices</h2>
+        <div class="price-row"><span>New website</span><strong>$490</strong></div>
+        <div class="price-row"><span>Redesign</span><strong>$590</strong></div>
+        <div class="price-row"><span>Hosting &amp; upkeep / year</span><strong>$390–$490</strong></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What we offer</h2>
+      <p class="section-lead">Straightforward packages for owners who want a clear site without managing developers or a complicated CMS.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon" aria-hidden="true">✦</div>
+          <h3>New website</h3>
+          <p>1–5 pages for businesses that only have a social page or no site yet. Mobile-friendly layout, services, service area, and a quote or contact path.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">↻</div>
+          <h3>Redesign</h3>
+          <p>Replace a slow or unfinished builder site (Wix, GoDaddy, and similar) with a cleaner structure, working links, and a clearer path to contact you.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">☁</div>
+          <h3>Hosting &amp; upkeep</h3>
+          <p>Yearly hosting and upkeep so the site stays online and small text or contact updates stay easy. Billed once a year — no monthly fee.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="bg">
+    <div class="wrap">
+      <h2>Clear pricing</h2>
+      <p class="section-lead">Prices are in US dollars. A paid WordPress domain, if you need one, is billed separately.</p>
+      <div class="plans">
+        <article class="plan">
+          <span class="tag">New site</span>
+          <h3>New website</h3>
+          <div class="amount">$490 <small>one-time</small></div>
+          <ul>
+            <li>1–5 page site, mobile-friendly</li>
+            <li>Services, about, and contact / quote</li>
+            <li>Your phone and email on the site</li>
+            <li>Hosting &amp; upkeep $390 / year after</li>
+          </ul>
+          <a class="btn" href="mailto:hallo@jalupublishing.com?subject=New%20website%20inquiry">Ask about a new site</a>
+        </article>
+        <article class="plan featured">
+          <span class="tag">Redesign</span>
+          <h3>Website redesign</h3>
+          <div class="amount">$590 <small>one-time</small></div>
+          <ul>
+            <li>Rebuild on a cleaner, faster base</li>
+            <li>Quote / booking form path</li>
+            <li>Service and pricing pages as needed</li>
+            <li>Hosting &amp; upkeep $490 / year after</li>
+          </ul>
+          <a class="btn" href="mailto:hallo@jalupublishing.com?subject=Redesign%20inquiry">Ask about a redesign</a>
+        </article>
+      </div>
+      <p class="fine">No monthly subscription. Hosting and upkeep are yearly. Domain registration for WordPress, when used, is separate.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Sample concepts</h2>
+      <p class="section-lead">These are sample demo sites we prepared as concepts for local service businesses — not live client websites. Open any one to see the style and structure.</p>
+      <div class="portfolio">
+        <a class="work" href="https://jalusaja.github.io/site-demos/frames-cleaning-crew/" target="_blank" rel="noopener noreferrer">
+          <div class="work-thumb t1" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-body">
+            <h3>Frame's Cleaning Crew</h3>
+            <p>Residential &amp; commercial cleaning concept</p>
+            <span class="badge">Sample concept</span>
+          </div>
+        </a>
+        <a class="work" href="https://jalusaja.github.io/site-demos/klean-freaks-cleaning/" target="_blank" rel="noopener noreferrer">
+          <div class="work-thumb t2" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-body">
+            <h3>Klean Freaks Cleaning</h3>
+            <p>New-site concept for a cleaning company</p>
+            <span class="badge">Sample concept</span>
+          </div>
+        </a>
+        <a class="work" href="https://jalusaja.github.io/site-demos/sharons-crystal-touch/" target="_blank" rel="noopener noreferrer">
+          <div class="work-thumb t3" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-body">
+            <h3>Sharons Crystal Touch</h3>
+            <p>New-site concept from a Nextdoor listing</p>
+            <span class="badge">Sample concept</span>
+          </div>
+        </a>
+        <a class="work" href="https://jalusaja.github.io/site-demos/elite-cleaners-ftw/" target="_blank" rel="noopener noreferrer">
+          <div class="work-thumb t4" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-body">
+            <h3>Elite Cleaners of Fort Wayne</h3>
+            <p>Redesign concept — cleaner structure &amp; quote path</p>
+            <span class="badge">Sample concept</span>
+          </div>
+        </a>
+        <a class="work" href="https://jalusaja.github.io/site-demos/its-us-or-dust/" target="_blank" rel="noopener noreferrer">
+          <div class="work-thumb t5" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-body">
+            <h3>It's Us or Dust</h3>
+            <p>Redesign concept — replace a builder template</p>
+            <span class="badge">Sample concept</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="bg">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="section-lead">A short, clear path from first email to a live site.</p>
+      <div class="steps">
+        <article class="step">
+          <h3>Say hello</h3>
+          <p>Email us with your business name, city, and what you need — new site or redesign.</p>
+        </article>
+        <article class="step">
+          <h3>Review a draft</h3>
+          <p>We prepare a demo you can click through on phone and desktop, then adjust together.</p>
+        </article>
+        <article class="step">
+          <h3>Go live</h3>
+          <p>We put the site on your domain (or help you get one) with your contact details in place.</p>
+        </article>
+        <article class="step">
+          <h3>Yearly upkeep</h3>
+          <p>Hosting and small updates are covered by the yearly fee — no monthly subscription.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <p class="section-lead">Short answers to common questions.</p>
+      <div class="faq">
+        <details>
+          <summary>Do you charge a monthly fee?</summary>
+          <p>No. The build is a one-time fee. Hosting and upkeep are billed yearly ($390 for a new site, $490 for a redesign).</p>
+        </details>
+        <details>
+          <summary>What is included in hosting &amp; upkeep?</summary>
+          <p>Keeping the site online, basic security/updates for the stack we use, and small text or contact changes when you ask.</p>
+        </details>
+        <details>
+          <summary>Do I need to buy a domain?</summary>
+          <p>If you already have a domain, we can use it. If you need a new one — including a paid WordPress domain — that cost is billed separately.</p>
+        </details>
+        <details>
+          <summary>Can I see examples before deciding?</summary>
+          <p>Yes. The sample concepts on this page show the style and structure. We can also prepare a draft demo for your business before you commit.</p>
+        </details>
+        <details>
+          <summary>Who is this for?</summary>
+          <p>Small local service businesses in the US, UK, and Australia — cleaning, plumbing, salons, auto shops, and similar trades that need a clear website customers can trust.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <h2>Ready when you are</h2>
+          <p>Tell us about your business and whether you need a new site or a redesign. We reply by email.</p>
+          <a class="btn" href="mailto:hallo@jalupublishing.com">Email hallo@jalupublishing.com</a>
+        </div>
+        <dl class="contact-meta">
+          <dt>Email</dt>
+          <dd><a href="mailto:hallo@jalupublishing.com">hallo@jalupublishing.com</a></dd>
+          <dt>Company</dt>
+          <dd>Jalu Publishing</dd>
+          <dt>Focus</dt>
+          <dd>Local service websites · US / UK / AU</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="y"></span> Jalu Publishing · <a href="mailto:hallo@jalupublishing.com">hallo@jalupublishing.com</a></div>
+    <div><a href="#pricing">Pricing</a> · <a href="#work">Samples</a> · <a href="#faq">FAQ</a></div>
+  </div>
+</footer>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+var btn = document.getElementById('menuBtn');
+var nav = document.getElementById('nav-links');
+if (btn && nav) {
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+</script>
+</body>
+</html>
