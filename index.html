@@ -86,17 +86,10 @@ section h2{font-size:clamp(1.55rem,3vw,2rem);letter-spacing:-.02em;margin:0 0 .5
 .portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
 .work{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
 .work:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(18,38,58,.08)}
-.work-thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--brand),var(--brand2));position:relative;overflow:hidden}
-.work-thumb::after{content:"";position:absolute;inset:18% 12% auto;height:62%;background:rgba(255,255,255,.92);border-radius:10px 10px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.15)}
-.work-thumb .bars{position:absolute;left:18%;right:18%;top:28%;display:grid;gap:8px;z-index:1}
-.work-thumb .bars i{display:block;height:8px;border-radius:4px;background:rgba(15,61,76,.15)}
-.work-thumb .bars i:nth-child(1){width:55%}
-.work-thumb .bars i:nth-child(2){width:78%}
-.work-thumb .bars i:nth-child(3){width:42%}
-.t2{background:linear-gradient(135deg,#1a4a5c,#2a8a9a)}
-.t3{background:linear-gradient(135deg,#0d3550,#3d7a8c)}
-.t4{background:linear-gradient(135deg,#123848,#1f6f82)}
-.t5{background:linear-gradient(135deg,#0b2f3c,#268094)}
+.work-thumb{aspect-ratio:16/10;background:#e8eef1;position:relative;overflow:hidden}
+.work-thumb img{object-fit:cover;object-position:top;width:100%;height:100%;display:block}
+.work-thumb:not(:has(img)){background:linear-gradient(135deg,var(--brand),var(--brand2))}
+.work-thumb:not(:has(img))::after{content:"";position:absolute;inset:18% 12% auto;height:62%;background:rgba(255,255,255,.92);border-radius:10px 10px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.15)}
 .work-body{padding:1.05rem 1.15rem 1.2rem}
 .work-body h3{margin:0 0 .35rem;font-size:1.05rem;color:var(--brand)}
 .work-body p{margin:0;font-size:.9rem;color:var(--muted)}
@@ -247,7 +240,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
       <p class="section-lead">These are sample demo sites we prepared as concepts for local service businesses — not live client websites. Open any one to see the style and structure.</p>
       <div class="portfolio">
         <a class="work" href="https://jalusaja.github.io/site-demos/frames-cleaning-crew/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t1" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/frames-cleaning-crew.webp" alt="Frame's Cleaning Crew sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Frame's Cleaning Crew</h3>
             <p>Residential &amp; commercial cleaning concept</p>
@@ -255,7 +248,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/klean-freaks-cleaning/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t2" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/klean-freaks-cleaning.webp" alt="Klean Freaks Cleaning sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Klean Freaks Cleaning</h3>
             <p>New-site concept for a cleaning company</p>
@@ -263,7 +256,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/sharons-crystal-touch/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t3" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/sharons-crystal-touch.webp" alt="Sharons Crystal Touch sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Sharons Crystal Touch</h3>
             <p>New-site concept from a Nextdoor listing</p>
@@ -271,7 +264,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/elite-cleaners-ftw/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t4" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/elite-cleaners-ftw.webp" alt="Elite Cleaners of Fort Wayne sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Elite Cleaners of Fort Wayne</h3>
             <p>Redesign concept — cleaner structure &amp; quote path</p>
@@ -279,7 +272,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/its-us-or-dust/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t5" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/its-us-or-dust.webp" alt="It's Us or Dust sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>It's Us or Dust</h3>
             <p>Redesign concept — replace a builder template</p>
@@ -288,7 +281,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
         </a>
 
         <a class="work" href="https://jalusaja.github.io/site-demos/morris-family-landscaping/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t1" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/morris-family-landscaping.webp" alt="Morris Family Landscaping sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Morris Family Landscaping</h3>
             <p>New-site concept for Spokane lawn &amp; outdoor care</p>
@@ -296,7 +289,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/clutchland-spokane/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t2" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/clutchland-spokane.webp" alt="Clutchland sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Clutchland</h3>
             <p>New-site concept for a Spokane transmission shop</p>
@@ -304,7 +297,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/bartons-properties-pools/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t3" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/bartons-properties-pools.webp" alt="Barton's Properties &amp; Pools sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Barton's Properties &amp; Pools</h3>
             <p>New-site concept for Des Moines lawn, pools &amp; repairs</p>
@@ -312,7 +305,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/anywhere-auto-repair-dsm/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t4" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/anywhere-auto-repair-dsm.webp" alt="Anywhere Auto Repair DSM sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Anywhere Auto Repair DSM</h3>
             <p>New-site concept for a mobile mechanic</p>
@@ -320,7 +313,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem;color:var(--mu
           </div>
         </a>
         <a class="work" href="https://jalusaja.github.io/site-demos/activate-outdoor-services/" target="_blank" rel="noopener noreferrer">
-          <div class="work-thumb t5" aria-hidden="true"><div class="bars"><i></i><i></i><i></i></div></div>
+          <div class="work-thumb"><img src="assets/samples/activate-outdoor-services.webp" alt="Activate Outdoor Services sample site preview" loading="lazy" width="1000" height="625"></div>
           <div class="work-body">
             <h3>Activate Outdoor Services</h3>
             <p>New-site concept for pressure washing &amp; outdoor work</p>
